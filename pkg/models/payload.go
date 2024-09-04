@@ -30,3 +30,21 @@ type ParameterPayload struct {
 	DischargeLimit *float64 `json:"discharge_limit,omitempty"`
 	OutputPower    *float64 `json:"output_power_w,omitempty"`
 }
+
+type CompletePayload struct {
+	OutputPower           float64  `json:"output_w"`
+	SolarPower            float64  `json:"solar_w"`
+	Soc                   float64  `json:"soc"`
+	ChargePower           float64  `json:"charge_w"`
+	DischargePower        float64  `json:"discharge_w"`
+	BatteryNum            int      `json:"battery_num"`
+	GenerationTotalEnergy float64  `json:"generation_total_kwh"`
+	GenerationTodayEnergy float64  `json:"generation_today_kwh"`
+	WorkMode              WorkMode `json:"work_mode,omitempty,omitempty"`
+	SerialNumber 		  string  `json:"serial"`
+	Soc          		  float64 `json:"soc"`
+	Temperature  		  float64 `json:"temp"`
+	SetpointChargingLimit  		  *float64 `json:"charging_limit,omitempty"`
+	SetpointDischargeLimit 		  *float64 `json:"discharge_limit,omitempty"`
+	SetpointOutputPower    		  *float64 `json:"output_power_w,omitempty"`
+}
